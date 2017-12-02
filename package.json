@@ -1,11 +1,10 @@
 {
-  "name": "telegram",
+  "name": "yaranpoyamofi_bot",
   "version": "1.0.0",
-  "description": "bot of telegram",
+  "description": "telegram bot for yaranpoyamofid channel",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -14,14 +13,14 @@
   "keywords": [
     "bot"
   ],
-  "author": "hosein ahangari",
+  "author": "Hosein Ahangari",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hoseinahangari/telegramBot/issues"
   },
   "homepage": "https://github.com/hoseinahangari/telegramBot#readme",
   "dependencies": {
-    "express": "^4.16.2",
-    "telebot": "^1.2.3"
+    "mongodb": "^2.2.33",
+    "node-telegram-bot-api": "^0.29.0"
   }
 }
