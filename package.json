@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/hoseinahangari/telegramBot#readme",
   "dependencies": {
-    "mongodb": "^2.2.33",
     "node-telegram-bot-api": "^0.29.0"
   }
 }
