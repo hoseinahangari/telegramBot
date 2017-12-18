@@ -2,6 +2,8 @@ const TelegramBot = require('node-telegram-bot-api');
 const token = '423708409:AAHD1sfmbG4PDSoFro92hqgIFoeIIyBfI2w';
 const bot = new TelegramBot(token, { polling: true });
 
+const myid = '131434744';
+
 // var MongoClient = require('mongodb').MongoClient;
 // var url = "mongodb://localhost:27017/mydb";
 // MongoClient.connect(url, function (err, db) {
@@ -10,22 +12,6 @@ const bot = new TelegramBot(token, { polling: true });
 //     db.close();
 // });
 
-
-
-
-
-var last_keyboard_msgid = 0;
-// bot.onText(/\/echo (.+)/, (msg, match) => {
-//     // 'msg' is the received Message from Telegram
-//     // 'match' is the result of executing the regexp above on the text content
-//     // of the message
-
-//     const chatId = msg.chat.id;
-//     const resp = match[2]; // the captured "whatever"
-//     // const resp = 'salam'
-//     // send back the matched "whatever" to the chat
-//     bot.sendMessage(chatId, resp);
-// });
 bot.onText(/\/start/, (msg) => {
 
     const opts = {
@@ -45,6 +31,7 @@ bot.onText(/\/start/, (msg) => {
             last_keyboard_msgid = resault.message_id
             console.log('end')
         });
+    console.log(msg.chat.id)
 
 });
 
@@ -106,12 +93,12 @@ bot.onText(/ارتباط با تیم پشتیبانی/, (msg) => {
 })
 
 
-
 bot.on('channel_post', (msg) => {
     console.log(msg)
-    // const chatId = msg.chat.id;
+    const chatId = msg.chat.id;
     // send a message to the chat acknowledging receipt of their message
-    // bot.sendMessage(chatId, 'Received your message');
+    bot.sendMessage(chatId, 'someone joined');
+    bot.getChatMember(chatId, myid).then(resault => bot.sendMessage(myid, JSON.stringify(resault)));
 });
 
 // Matches /love
