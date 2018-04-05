@@ -1,5 +1,5 @@
 const TelegramBot = require('node-telegram-bot-api');
-const token = '423708409:AAHD1sfmbG4PDSoFro92hqgIFoeIIyBfI2w';
+const token = '536702114:AAE5PxXtTmrZD4z8GWXAOeqYybxAEcrD93I';
 const bot = new TelegramBot(token, { polling: true });
 
 // var MongoClient = require('mongodb').MongoClient;
