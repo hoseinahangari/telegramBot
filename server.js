@@ -50,7 +50,7 @@ bot.onText(/📁  ارسال داده/, msg => {
 
 // console.log(bot.getChatMembersCount())
 
-bot.onText(/مشاهده قوانین ارسال آگهی/, (msg) => {
+bot.onText(/🖊 مشاهده قوانین ارسال داده فرهنگی/, (msg) => {
     const chatId = msg.chat.id;
     const op = {
         reply_to_message_id: msg.message_id,
