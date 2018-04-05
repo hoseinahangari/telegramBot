@@ -71,8 +71,7 @@ bot.onText(/ارتباط با تیم پشتیبانی/, (msg) => {
         remove_keyboard: true
     };
     bot.sendMessage(chatId, `
-    رئیس کل :  @shkhsn
-    تیم فنی کانال : @hosein_ahangari
+    پل ارتباطی : @hosein_ahangari
     `, options);
 })
 
