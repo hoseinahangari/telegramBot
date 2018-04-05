@@ -7,6 +7,8 @@ const rules = `📣 جهت ارسال داده در کانال "فرهنگی" ب
 داده ها مطابق قوانین جمهوری اسلامی ایران باشد :))
 مطالب، هشتگ گذاری شوند
 `;
+const welcome = `سلام 😊
+از طرف تیم پشتیبانی کانال فرهنگی، بهت خوش آمد میگم ✋️`;
 // var MongoClient = require('mongodb').MongoClient;
 // var url = "mongodb://localhost:27017/mydb";
 // MongoClient.connect(url, function (err, db) {
@@ -28,8 +30,7 @@ bot.onText(/\/start/, (msg) => {
 
         })
     };
-    bot.sendMessage(msg.chat.id, `سلام🙂
-    🔸 گروه فرهنگی به شما خیر مقدم عرض میکند`
+    bot.sendMessage(msg.chat.id, welcome
         , opts).then(resault => {
             // console.log(resault)
             last_keyboard_msgid = resault.message_id
